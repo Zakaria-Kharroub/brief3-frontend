@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/product.css">
+
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+
+
+    <title>responsive</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo" ><a href="index.html" class="a-logo">You<span style="color: #686AA1;font-family: 'Allerta Stencil', sans-serif;">Shop</span></a></div>
+        <div class="logo-res" ><a href="index.html" class="a-logo">Y<span style="color: #686AA1;font-family: 'Allerta Stencil', sans-serif;">S</a></span></div>
+
+        
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="">shop</a>
+                </li>
+                <li>
+                    <a href="">blog</a>
+                </li>
+                <li>
+                    <a href="">our story</a>
+                </li>
+                <li class="espace">
+                    <span class="inner-espace">|</span>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li>
+                    <a href="panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="card-product">
+
+            <img src="./images/prod.png" alt="" class="image-product">
+            
+
+            <div class="product-details">
+                <div class="title-price">
+                    <p class="title-product-details">product title</p>
+                    <p class="price-product-details">$20.00</p>
+                </div>
+                <div class="rating-products">
+                    <span><i class="fa-solid fa-star" style="color: #ffd700;float: left;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #ffd700;float: left;"></i></span>
+                    <span><i class="fa-solid fa-star" style="color: #ffd700;float: left;"></i></span>
+                    <span><i class="fa-solid fa-star" style="float: left;"></i></span>
+                    <span><i class="fa-solid fa-star" style="float: left;"></i></span>
+                </div><br>
+                <div class="description">
+                    <p class="desc-title">description</p>
+                    <p class="desc-parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ea quasi saepe eum numquam vitae eligendi quas adipisci veritatis sapiente!</p>
+                </div>
+                <div class="quantite">
+                    <span class="quantite-t"> Quantite </span>
+                    <span class="quantite-dec"> - </span>
+                    <span class="quantite-nbr"> 2 </span>
+                    <span class="quantite-inc"> + </span>
+                </div>
+                <div class="btns-product-details">
+                    <button>ajouter au panier</button>
+                    <button>acheter</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <h1 style="text-align: center;">reviews</h1>
+    <!-- reviews 2 -->
+    <section class="reviews">
+        <div class="review-card"> 
+            <div class="person-pic-name">
+               <img src="./images/profil-person.jpg" alt="" >
+               <p>nassima</p>
+            </div>
+            <div class="reviews-text-likes">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione culpa eius ullam autem ex! Pariatur repellendus hic distinctio ipsa corrupti.</p>
+            </div>
+        </div>
+    </section>
+    <!-- reviews 2 -->
+    <section class="reviews">
+        <div class="review-card"> 
+            <div class="person-pic-name">
+               <img src="./images/profil-person-2.jpg" alt="" >
+               <p>karim</p>
+            </div>
+            <div class="reviews-text-likes">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione culpa eius ullam autem ex! Pariatur repellendus hic distinctio ipsa corrupti.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+ 
+
+
+
+    <footer>
+        <!-- <section class="all-footer"> -->
+
+            <div class="link-footer">
+                <ul>
+                    <li><a href="">contact </a></li>
+                    <li><a href="">terme of service </a></li>
+                    <li><a href="">shipping and returns </a></li>
+                </ul>
+            </div>
+            <div class="sec2-footer">
+                <div class="form-footer">
+                    <form action="">
+                        <input type="email" placeholder="Give an email, get the newsletter.">
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                    
+    
+                
+            </div>
+
+        <!-- </section> -->
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
