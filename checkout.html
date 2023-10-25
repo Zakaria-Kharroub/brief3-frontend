@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+
+
+    <title>responsive</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo" ><a href="index.html" class="a-logo">You<span style="color: #686AA1;font-family: 'Allerta Stencil', sans-serif;">Shop</span></a></div>
+        <div class="logo-res" ><a href="index.html" class="a-logo">Y<span style="color: #686AA1;font-family: 'Allerta Stencil', sans-serif;">S</a></span></div>
+
+        
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="">shop</a>
+                </li>
+                <li>
+                    <a href="">blog</a>
+                </li>
+                <li>
+                    <a href="">our story</a>
+                </li>
+                <li class="espace">
+                    <span class="inner-espace">|</span>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+                <li>
+                    <a href="panier.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="all-checkout">
+
+            <div class="product-card">
+                <div class="inner-card">
+                    <img src="./images/prod.png" alt="" width="200" height="200">
+                    <div class="cart-checkout">
+                        <div class="product-ttl-price">
+                            <p class="title">product title</p>
+                            <p class="price">$50.00</p>
+                        </div>
+                        <div class="product-qtt-total">
+                            <p class="qtt">Quantite</p>
+                            <p class="qtt-count">4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+
+                <div class="inner-card">
+                    <img src="./images/prod.png" alt="" width="200" height="200">
+                    <div class="cart-checkout">
+                        <div class="product-ttl-price">
+                            <p class="title">product title</p>
+                            <p class="price">$50.00</p>
+                        </div>
+                        <div class="product-qtt-total">
+                            <p class="qtt">Quantite</p>
+                            <p class="qtt-count">4</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="total-check">
+                    <div class="subtotal">
+                        <p>subtotal :</p>
+                        <p>$ 300.00</p>
+                    </div>
+                    <div class="livraison">
+                        <p>livraison :</p>
+                        <p>$ 05.00</p>
+                    </div>
+                    <div class="total-general">
+                        <p>TOTAL :</p>
+                        <p>$ 305.00</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="formulaire">
+               <form class="form-check" >
+
+                <input class="input-top" type="text" name="full-name" id="full-name" placeholder="Nom et prenom..." onkeyup="nameValid()" required>
+                <div id="validation-name"></div>
+
+
+
+                <input class="input-top"  type="text" name="adress" id="adress" placeholder="adress..." onkeyup="adressValid()" required>
+                <div id="validation-adress"></div>
+
+
+
+                <input class="input-top"  type="email" name="email" placeholder="email..." id="email" onkeyup="emailValid()" required>
+                <div id="validation-email"></div>
+
+                <input class="input-top"  type="number" name="tel"  id="tel" required placeholder="telphone..." onkeyup="telephoneValid()">
+                <div id="validation-telephone"></div>
+
+                <input class="input-top"  type="number" name="number-card"  id="credit" required placeholder="Card number..." onkeyup="validCredit()">
+                <div id="validation-credit"></div>
+                <div id="datt">date expiration</div>
+                <div class="input-botm">
+                    <input class="input-date-exp" type="date" name="birthdate" min="1917-01-01" id="date-exp" onkeyup="validDate()" required>
+                    <input class="input-cvv"  type="number" name="cvv"  id="cvv" required placeholder="CVV..." onkeyup="validCVV()">
+                </div>
+
+                 <div class="btn-checkout">
+                    <button type="submit"  class="acheter" onclick="validation()">place order</button>
+                    <button type="reset" class="reset" >reset</button>
+                 </div>
+                
+               </form>
+            </div> 
+        </section>
+    </main>
+
+    <script>
+
+// menu boton
+hamburger = document.querySelector(".hamburger");
+hamburger.onclick = function() {
+navBar = document.querySelector(".nav-bar");
+navBar.classList.toggle("active");
+}
+
+
+var nameError = document.getElementById("validation-name");
+var adressError = document.getElementById("validation-adress");
+var telephoneError = document.getElementById("validation-telephone");
+var emailError = document.getElementById('validation-email');
+var creditError = document.getElementById('validation-credit');
+
+
+
+
+
+
+
+
+
+//----------- name validation 
+function nameValid(){
+var name = document.getElementById("full-name").value;
+if (name.length==0){
+   document.getElementById("full-name").style.border="solid red 5px";
+   nameError.innerHTML="le champ est obliger";
+   nameError.style.color='red';
+   return false;
+}
+
+
+if(!name.match(/^[a-zA-Z]+ [a-zA-Z]+$/)){
+    document.getElementById("full-name").style.border="solid red 5px";
+    nameError.innerHTML="entrer le nom et le prenom";
+    nameError.style.color='red';
+    return false;
+}
+
+nameError.style.color="green";
+nameError.innerHTML="valider <i class='fa-solid fa-check'></i> ";
+document.getElementById("full-name").style.border="solid green 5px";
+return true;
+}
+
+
+
+
+
+//------------ adress validation 
+function adressValid(){
+
+var adress = document.getElementById("adress").value;
+
+if (adress.length==0){
+   document.getElementById("adress").style.border="solid red 5px";
+   adressError.style.color="red";
+   adressError.innerHTML="le champ est obliger";
+   return false;
+}
+
+adressError.style.color="green";
+adressError.innerHTML="valider <i class='fa-solid fa-check'></i> ";
+document.getElementById("adress").style.border="solid green 5px";
+return true;
+}
+
+// date valid
+function validDate(){
+
+     var date = document.getElementById("date-exp").value;
+
+     if(date.length==0){
+        document.getElementById("date-exp").style.border="solid red 5px";
+        
+     }else{
+        document.getElementById("date-exp").style.border="solid green 5px";
+     }
+     
+
+}
+
+
+
+//--------- email valid
+function emailValid() {
+
+   var email = document.getElementById('email').value;
+
+   if (email.length == 0) {
+      emailError.style.color ="red";
+      document.getElementById("email").style.border="solid red 5px";
+      emailError.innerHTML = 'email required';
+      return false;
+   }
+
+   if (!email.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+      emailError.style.color ="red";
+      document.getElementById("email").style.border="solid red 5px";
+      emailError.innerHTML = 'email invalid';
+      return false;
+   }
+
+    emailError.style.color="green";
+    emailError.innerHTML="valider <i class='fa-solid fa-check'></i> ";
+    document.getElementById("email").style.border="solid green 5px";
+    return true;
+}
+
+//---------------- telephone valid
+function telephoneValid(){
+    var phone = document.getElementById('tel').value;
+
+    if(phone.length==0){
+        telephoneError.style.color='red';
+        document.getElementById("tel").style.border="solid red 5px";
+        telephoneError.innerHTML= 'le champ de telphone est obliger';
+        return false;
+    }
+
+    if(phone.length !== 10){
+        telephoneError.style.color='red';
+        document.getElementById("tel").style.border="solid red 5px";
+        telephoneError.innerHTML= 'just 10 caract';
+        return false;
+    }
+    if(!phone.match(/^[0-9]{10}$/) ){
+        telephoneError.style.color='red';
+        document.getElementById("tel").style.border="solid red 5px";
+        telephoneError.innerHTML= 'phone is required';
+        return false;
+    }
+    telephoneError.style.color="green";
+    telephoneError.innerHTML="valider <i class='fa-solid fa-check'></i> ";
+    document.getElementById("tel").style.border="solid green 5px";
+    return true;
+}
+
+
+function validCVV(){
+    var cvv = document.getElementById('cvv').value;
+    if (cvv.length==0){
+        document.getElementById("cvv").style.border="solid red 5px";
+        return false;
+    }
+    if(cvv.length !== 3){
+        document.getElementById("cvv").style.border="solid red 5px";
+        return false;
+    }
+    document.getElementById("cvv").style.border="solid green 5px";
+    return true;
+
+
+}
+
+
+
+
+//---------------- credit valid
+function validCredit(){
+    var credit = document.getElementById('credit').value;
+
+
+    if(credit.length==0){
+        document.getElementById("credit").style.border="solid red 5px";
+        creditError.innerHTML= 'le champ de credit cart est obliger';
+        creditError.style.color='red';
+        return false;
+    }
+
+    if(credit.length !== 16){
+        document.getElementById("credit").style.border="solid red 5px";
+        creditError.style.color='red'
+        creditError.innerHTML= 'just 16 caract';
+        return false;
+    }
+
+    if(!credit.match(/^[0-9]{16}$/) ){
+        document.getElementById("credit").style.border="solid red 5px";
+        creditError.innerHTML= 'number card is required';
+        creditError.style.color='red'
+        return false;
+    }
+    
+    creditError.style.color="green";
+    creditError.innerHTML="valider <i class='fa-solid fa-check'></i> ";
+    document.getElementById("credit").style.border="solid green 5px";
+    return true;
+}
+
+
+
+
+
+function validation(){
+    nameValid();
+    adressValid();
+    emailValid();
+    telephoneValid();
+    validCredit();
+    validDate();
+    validCVV();
+}
+            
+    </script>
+        
+    <footer>
+        <!-- <section class="all-footer"> -->
+
+            <div class="link-footer">
+                <ul>
+                    <li><a href="">contact </a></li>
+                    <li><a href="">terme of service </a></li>
+                    <li><a href="">shipping and returns </a></li>
+                </ul>
+            </div>
+            <div class="sec2-footer">
+                <div class="form-footer">
+                    <form action="">
+                        <input type="email" placeholder="Give an email, get the newsletter.">
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                    
+    
+                
+            </div>
+
+        <!-- </section> -->
+    </footer>
+
+
+
+
+
+   
+</body>
+
+</html>
