@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+    --black-color:#000;
+    --white-color:#fff;
+    --dore-color: #A18A68;
+    --grey-color:#EBECEE;
+    --grey-fonce:#707070;
+    --blue-color:#686AA1;
+    
+
+}
+
+body {
+
+    background-color: var(--white-color);
+}
+/* header */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    
+}
+.a-logo{
+    color: var(--dore-color);
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+
+
+
+/* main */
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+#validation-name, #validation-adress,#validation-telephone,#validation-email,#validation-credit,#datt{
+    padding-left: 20px; font-size: 10px;
+}
+
+
+
+.formulaire{
+    width: 50%;
+}
+
+.all-checkout{
+    width: 85%;
+    display: flex;
+    
+}
+
+/* form */
+.form-check{
+    /* background-color: yellow; */
+    padding: 2% 2% 2% 20%;
+    
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.input-top{
+    padding: 3%;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--grey-color);
+}
+.input-top::placeholder{
+    color: var(--black-color);
+}
+.input-botm{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+    gap: 3%;
+}
+.input-botm input{
+    width: 100%;
+    padding: 3%;
+    font-size: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--grey-color);
+}
+
+.input-botm  .input-cvv::placeholder{
+    color: var(--black-color);
+}
+
+.btn-checkout{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 2%;
+}
+
+.btn-checkout button{
+    width: 40%;
+    padding: 3%;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: var(--dore-color);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+.btn-checkout .reset{
+    background-color: var(--grey-fonce);
+}
+
+.btn-checkout button:hover{
+    background-color: #aa9b84;
+}
+.btn-checkout button:active{
+    background-color: #725a35;
+}
+
+
+
+
+
+
+
+/* check */
+
+
+.product-card{
+    width: 50%;
+    /* ------------------------------------------------------------------ */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap:20px ;
+}
+.inner-card img{
+    border-radius: 20px 0px 0px 20px ;
+    width: 50%;
+    /* height: 50%; */
+}
+
+.inner-card{
+    display: flex;
+    gap: 2%;
+    width: 100%;
+    background-color: var(--grey-color);
+    border-radius: 20px ;
+    align-items: center;
+    
+    font-size: 150%;
+    
+}
+
+
+.total-check{
+    /* background-color: yellow; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 11%;
+    gap: 10px;
+}
+.subtotal{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.livraison{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 120%;
+}
+.total-general{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+
+
+
+.cart-checkout{
+    width: 100%;
+    padding-right: 2%;
+    
+}
+.product-ttl-price{
+    /* background-color: #ffeaca; */
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8%;  
+}
+.product-ttl-price .price ,.product-qtt-total .qtt-count{
+  color: var(--dore-color);
+}
+.product-qtt-total{
+    /* background-color: #ffe5bf; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8%;
+    
+}
+
+
+
+
+
+
+/*  main */
+
+
+
+
+
+
+
+
+.logo {
+    font-size: 28px;
+    color: var(--dore-color);
+    font-family: 'Allerta Stencil', sans-serif;
+}
+.logo-res{
+    font-size: 28px;
+    color: var(--dore-color);
+    font-family: 'Allerta Stencil', sans-serif;
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: var(--black-color);
+    font-size: 20px;
+    padding: 10px 10px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: 4px var(--white-color) solid;
+}
+
+.nav-bar ul li .inner-espace{
+    display: block;
+    font-size: 20px;
+    padding: 10px 25px;
+    transition: 0.2s;
+    margin: 0 5px;
+    border: 4px var(--white-color) solid;
+    
+
+}
+
+
+
+.nav-bar ul li a:hover {
+    color: var(--dore-color);
+    border-bottom: 4px solid var(--dore-color);
+    border-radius: 3px;
+
+}
+
+
+
+
+
+
+
+/*================================ footer ==============================*/
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    margin-bottom: 30px;
+    color: var(--grey-fonce);
+    
+}
+.link-footer ul {
+    display: flex;
+    gap: 15px;  
+}
+.link-footer ul li a {
+    color: var(--grey-fonce);
+    transition: 0.2s;
+}
+.link-footer ul li a:hover{
+    color: var(--dore-color);
+}
+.form-footer{
+    border-bottom: 2px solid var(--grey-fonce);
+    padding-bottom: 10px;
+}
+.form-footer form input{
+    border: none;
+    padding:5px;
+}
+.form-footer form button{
+    background: none;
+    border: none;
+}
+.footer-icons{
+    margin-top: 2%;
+    float: right;
+}
+.footer-icons i{
+    margin-left: 20px;
+    transition: 0.2s;
+}
+.footer-icons i:hover{
+color: var(--dore-color);
+}
+
+
+/*================================ footer ==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media only screen and (max-width:1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+
+    /* =============nav-bar================== */
+    .logo{
+        display: none;
+    }
+    .logo-res{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: var(--blue-color);
+        margin: 6px 0;
+    }
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: var(--grey-color);
+        
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .espace {
+        display: none;
+    }
+    .nav-bar.active {
+        height: 450px;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+    .nav-bar ul li a {
+        border: 4px var(--grey-color) solid;
+        
+    }
+
+    /*================ footer =============*/
+    footer{
+        display: block;
+    }
+    .sec2-footer{
+        display: flex;
+        justify-content: space-around;
+    }
+    .link-footer {
+        margin-bottom: 3%;
+    }
+
+
+    /* ====main */
+
+
+    .all-checkout{
+        /* background-color: green; */
+        flex-direction: column;
+        align-items: center;  
+        
+    }
+    .product-card{
+        width: 100%;
+        /* height: 50%; */
+        font-size: 10px;
+    }
+    .inner-card{
+        width: 100%;
+        /* background-color: red; */
+        height: 70%;
+    }
+
+      /* form */
+
+    .formulaire{
+        width: 90%;
+        margin-top: 20px;
+    }
+    
+  
+    .form-check{
+        padding: 2% 2% 2% 2%;
+    }
+
+
+
+  
+}
+
+
+
+@media only screen and (max-width:570px) {
+
+    
+    .hero{
+        display: none;
+    }
+    .product-head{
+        margin: 10px 0 -100px 0;
+    }
+    footer{
+        padding:  50px 50px;
+        margin-bottom: 30px;
+        text-align: center; 
+        position: relative;
+    }
+    
+    .footer-icons{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .form-footer form input {
+       font-size: 11px;
+    }
+    .link-footer ul{
+        justify-content: center;
+    }
+    .link-footer ul {
+        gap: 10px; 
+        font-size: 11px;
+    }
+    .sec2-footer{
+        display: block;
+    }
+
+    /*----- main---- */
+    
+ 
+
+
+
+
+
+
+}
