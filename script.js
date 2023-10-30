@@ -14,7 +14,14 @@ const decrementButtons = document.querySelectorAll('.cart .quantite button:first
 const quantiteInputs = document.querySelectorAll('.cart .quantite input');
 const totalPriceElements = document.querySelectorAll('.cart .cart-produc-total-price-valeur');
 const totalCheckoutElement = document.querySelector('.totoal-ttl-check-val');
-const prixProduit = 20.00; 
+// const prixProduit = 20.00; 
+const prixElements = document.querySelectorAll(".price-cart-valeur");
+const prixProduits = [];
+
+for (let i = 0; i < prixElements.length; i++) {
+    const prix = parseFloat(prixElements[i].textContent);
+    prixProduits.push(prix);
+}
 
 
 // incrementer boucle
@@ -54,10 +61,9 @@ function decrementQuantity(i) {
 // total card
 function updateTotal(i) {
     const quantite = parseInt(quantiteInputs[i].value);
-    const total = quantite * prixProduit;
+    const total = quantite * prixProduits[i];
     totalPriceElements[i].textContent = total.toFixed(2);
 }
-
 
 // total generarl
 function updateTotalCheckout() {
@@ -68,7 +74,7 @@ function updateTotalCheckout() {
     totalCheckoutElement.textContent = totalCheckout.toFixed(2);
 }
 
-
+updateTotalCheckout();
 
 
 
@@ -79,11 +85,11 @@ const cartSections = document.querySelectorAll('.cart');
 for (let i = 0; i < deleteButtons.length; i++) {
     deleteButtons[i].addEventListener('click', () => {
         const quantite = parseInt(quantiteInputs[i].value);
-        const totalProduit = quantite * prixProduit; 
+        const totalProduit = quantite * prixProduits[i];
 
         const nouveauTotal = parseFloat(totalCheckoutElement.textContent) - totalProduit;
-        cartSections[i].remove(); 
-        totalCheckoutElement.textContent = nouveauTotal.toFixed(2); 
+        cartSections[i].remove();
+        totalCheckoutElement.textContent = nouveauTotal.toFixed(2);
     });
 }
 
