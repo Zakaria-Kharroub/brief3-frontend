@@ -82,7 +82,7 @@ for (let i = 0; i < deleteButtons.length; i++) {
         const totalProduit = quantite * prixProduit; 
 
         const nouveauTotal = parseFloat(totalCheckoutElement.textContent) - totalProduit;
-        cartSections[i].remove(); // Supprimez la section du panier
+        cartSections[i].remove(); 
         totalCheckoutElement.textContent = nouveauTotal.toFixed(2); 
     });
 }
